@@ -1,0 +1,26 @@
+<h4 class='text-primary'>Edit A Restaurant</h4>
+
+<form (submit)='editRestaurant($event)'>
+  <label>Restaurant Name</label>
+  <input
+  type='text'
+  name='name'
+  [(ngModel)]='restaurant.name'
+  required
+  minlength='3'
+  ><br />
+
+  <label>Cuisine</label>
+  <input
+  type='text'
+  name='cuisine'
+  [(ngModel)]='restaurant.cuisine'
+  required
+  minlength='3'
+  ><br />
+
+  <button class='btn btn-success' type='submit'>Update</button>
+  <button class='btn btn-warning' [routerLink]="['/index']">Cancel</button>
+</form>
+
+<p class='text-danger'>{{error}}</p>
